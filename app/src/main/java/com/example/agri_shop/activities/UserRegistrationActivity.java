@@ -1,4 +1,4 @@
-package com.example.agri_shop;
+package com.example.agri_shop.activities;
 
 
 
@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +15,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.e_shop.R;
-import com.example.e_shop.models.UserModel;
+import com.example.agri_shop.R;
+import com.example.agri_shop.R;
+import com.example.agri_shop.models.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

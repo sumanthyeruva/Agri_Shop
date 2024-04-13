@@ -7,19 +7,39 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.e_shop.ui.home.HomeFragment"
+        android:name="com.example.agri_shop.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.e_shop.ui.Profile.ProfileFragment"
+        android:name="com.example.agri_shop.ui.Profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_category"
-        android:name="com.example.e_shop.ui.Category.CategoryFragment"
+        android:name="com.example.agri_shop.ui.Category.CategoryFragment"
         android:label="@string/category"
         tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/nav_offers"
+        android:name="com.example.agri_shop.OffersFragment"
+        android:label="offers"
+        tools:layout="@layout/fragment_offers" />
+    <fragment
+        android:id="@+id/nav_new_products"
+        android:name="com.example.agri_shop.NewProductsFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_new_products" />
+    <fragment
+        android:id="@+id/nav_my_cart"
+        android:name="com.example.agri_shop.MyCartFragment"
+        android:label="@string/my_cart"
+        tools:layout="@layout/fragment_my_cart" />
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.example.agri_shop.MyOrdersFragment"
+        android:label="my_orders"
+        tools:layout="@layout/fragment_my_orders" />
 </navigation>

@@ -13,17 +13,23 @@
         android:theme="@style/Theme.Eshop"
         tools:targetApi="31">
         <activity
-            android:name=".activities.UserRegistrationActivity"
-            android:exported="false" />
-        <activity
-            android:name="activities.MainActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Eshop.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserRegistrationActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

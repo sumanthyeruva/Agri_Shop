@@ -1,4 +1,4 @@
-package com.example.agri_shop.activities;
+package com.example.agri_shop;
 
 
 
@@ -15,8 +15,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.agri_shop.R;
-import com.example.agri_shop.R;
 import com.example.agri_shop.models.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

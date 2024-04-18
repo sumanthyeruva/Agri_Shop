@@ -58,7 +58,6 @@ public class DetailedActivity extends AppCompatActivity {
         addItem = findViewById(R.id.add_item);
         removeItem = findViewById(R.id.remove_item);
         price=findViewById(R.id.detailed_price);
-        rating=findViewById(R.id.detailed_rating);
         description=findViewById(R.id.detailed_dec);
 
         if(viewAllModel!=null){

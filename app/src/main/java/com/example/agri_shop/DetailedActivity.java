@@ -2,6 +2,7 @@ package com.example.agri_shop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
+import com.example.agri_shop.models.ViewAllModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,17 +28,16 @@ public class DetailedActivity extends AppCompatActivity {
     int totalQuantity =1;
     int totalPrice=0;
     ImageView detailedImg;
-    TextView price,rating,description;
+    TextView price,description;
     ImageView addItem,removeItem;
     Toolbar toolbar;
     Button addToCart;
 
+    ViewAllModel viewAllModel=null;
     FirebaseFirestore firestore;
     FirebaseAuth auth;
 
 
-
-    //ViewAllModel viewAllModel = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,9 +61,8 @@ public class DetailedActivity extends AppCompatActivity {
         description=findViewById(R.id.detailed_dec);
 
         if(viewAllModel!=null){
-            Glide.with(getApplicationContext()).load(viewAllModel.getImg_url().into(detailedImg));
-            rating.setText(viewAllModel.getRating());
-            description.setText(viewAllModel.getDescription());
+            Glide.with(getApplicationContext()).load(viewAllModel.getImg_url()).into(detailedImg);
+            description.setText(""+viewAllModel.getDescription());
             price.setText("Price :$"+viewAllModel.getPrice()+"/kg");
              totalPrice = viewAllModel.getPrice()*totalQuantity;
             if(viewAllModel.getType().equals("egg")){
@@ -105,21 +104,21 @@ public class DetailedActivity extends AppCompatActivity {
     }
 
     private void addedToCart(){
-        String saveCurrentDate,saveCurrentTime;
-        Calendar calForDate = Calendar.getInstance();
-
-        SimpleDateFormat currentDate=new SimpleDateFormat("MM dd,yyyy");
-        saveCurrentDate = currentDate.format(calForDate.getTime());
-
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calForDate.getTime());
+//        String saveCurrentDate,saveCurrentTime;
+//        Calendar calForDate = Calendar.getInstance();
+//
+//        SimpleDateFormat currentDate=new SimpleDateFormat("MM dd,yyyy");
+//        saveCurrentDate = currentDate.format(calForDate.getTime());
+//
+//        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+//        saveCurrentTime = currentTime.format(calForDate.getTime());
 
         final HashMap<String ,Object> cartMap = new HashMap<>();
 
         cartMap.put("productName",viewAllModel.getName());
         cartMap.put("productPrice",price.getText().toString());
-        cartMap.put("currentDate",saveCurrentDate);
-        cartMap.put("currentTime",saveCurrentTime);
+//        cartMap.put("currentDate",saveCurrentDate);
+//        cartMap.put("currentTime",saveCurrentTime);
         cartMap.put("totalQuantity",quantity.getText().toString());
         cartMap.put("totalPrice",totalPrice);
 

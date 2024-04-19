@@ -13,13 +13,17 @@
         android:theme="@style/Theme.Eshop"
         tools:targetApi="31">
         <activity
-            android:name=".DetailedActivity"
+            android:name=".ViewAllActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Eshop.NoActionBar">
+            android:theme="@style/Theme.Eshop.NoActionBar"/>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,10 +31,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".UserRegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".UserRegistrationActivity"
+            android:name=".DetailedActivity"
             android:exported="false" />
     </application>
 
